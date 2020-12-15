@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculator</title>
+
+<style>
+body {
+	margin:0px;
+	padding:opx;
+	background-color:black;
+}
+h1.titletext {
+	color:white;
+	font-family: "Lucida Console", Courier, monospace;
+}
+.cbutton {
+		width:103px;
+		height:50px;
+		font-size:16px;
+		font-weight:bold;
+		border:none;
+		border-radius:6px;
+		font-weight:bold;
+		border:none;
+		border-radius:6px;
+		box-shadow: 0 2px #f05454;
+	
+}
+
+.button {
+	width:50px;
+	height:50px;
+	font-size:16px;
+	font-weight:bold;
+	border:none;
+	border-radius:6px;
+	box-shadow: 0 2px #f05454;
+	
+}
+.buttonO {
+	width:103px;
+	height:50px;
+	font-size:16px;
+	font-weight:bold;
+	border:none;
+	border-radius:6px;
+	font-weight:bold;
+	border:none;
+	border-radius:6px;
+	box-shadow: 0 2px #f05454;
+}
+.btneql {
+	width:50px;
+	height:103px;
+	font-size:16px;
+	font-weight:bold;
+	border:none;
+	border-radius:6px;
+	font-weight:bold;
+	border:none;
+	border-radius:6px;
+	box-shadow: 0 2px #f05454;
+}
+.textbox {
+	width:175px;
+	
+	height:40px;
+	padding: 5px 18px;
+	border:2px solid black;
+	border-radius:5px;
+	font-size:16px;
+	color:black;
+	
+	font-weight:bold;
+	
+		
+}
+
+.button:hover {
+	background-image:linear-gradient(to left, #9ddfd3,#9088d4 );;
+}
+.btneql:hover {
+	background-image:linear-gradient(to left, #9ddfd3,#9088d4 );;
+}
+.buttonO:hover {
+	background-image:linear-gradient(to left, #9ddfd3,#9088d4 );;
+}
+.cbutton:hover {
+	background-image:linear-gradient(to left, #9ddfd3,#9088d4 );;
+}
+
+#container {
+	position:relative;
+	top:100px;
+	text-align:center;
+	width:218px;
+	padding:10px;
+	background:#03506f;
+	border:2px solid black;
+	border-radius:10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+</head>
+<body>
+<h1  style="text-align:center;" class="titletext">Calculator-A Flask Application</h1>
+<form action="http://127.0.0.1:2000/calculate" method="POST">
+<div id="container">
+
+
+<input type='text'  placeholder="Let's Get Started" class="textbox" name="txtbx" value="{{val}}"></input>
+
+<table>
+
+	<tr>
+		<td colspan=2><button type="submit" name="btn" class="cbutton" value="C">C</button></td>
+		<td><button type="submit" class="button" name="btn" value="<"> < </button></td>
+		<td><button type="submit" class="button" name="btn" value="/">/</button></td>
+	
+	</tr>
+<tr>
+	
+	<td><button type="submit" class="button" name="btn" value="7">7</button></td>
+	<td><button type="submit" class="button" name="btn" value="8">8</button></td>
+	<td><button type="submit" class="button" name="btn" value="9">9</button></td>
+	<td><button type="submit" class="button" name="btn" value="+">+</button></td>
+</tr>
+
+<tr>
+	
+	<td><button type="submit" class="button" name="btn" value="4">4</button></td>
+	<td><button type="submit" class="button" name="btn" value="5">5</button></td>
+	<td><button type="submit" class="button" name="btn" value="6">6</button></td>
+	<td><button type="submit" class="button" name="btn" value="-">-</button></td>
+</tr>
+
+<tr>
+	
+	<td><button type="submit" class="button" name="btn" value="1">1</button></td>
+	<td><button type="submit" class="button" name="btn" value="2">2</button></td>
+	<td><button type="submit" class="button" name="btn" value="3">3</button></td>
+	<td><button type="submit" class="button" name="btn" value="*">*</button></td>
+</tr>
+
+<tr>
+	
+	<td colspan=2><button type="submit" class="buttonO" name="btn" value="0">0</button></td>
+	<td><button type="submit" class="button" name="btn" value=".">.</button></td>
+	<td rowspan=2><button type="submit" class="btneql" name="btn" value="=">=</button></td>
+	
+	
+</tr>
+
+<tr>
+	
+	<td><button type="submit" class="button" name="btn" value="√"><b>√</b></button></td>
+	<td><button type="submit" class="button" name="btn" value="%">%</button></td>
+	<td><button type="submit" class="button" name="btn" value="^">^</button></td>
+	
+</tr>
+
+</table>
+</form>
+</div>
+</body>
+</html>
+
